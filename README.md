@@ -1,12 +1,6 @@
-# PD-NET(ECCV2020) 
+# PD-NET(V-COCO) 
 
 ### Experiment Results:
-#### HICO-DET
-| model     |  mAP | 
-|--------------|-----------|
-|Baseline |  | 
-|PD        |  |
-
 #### V-COCO
 | model     |  mAP | 
 |--------------|-----------|
@@ -22,8 +16,6 @@ conda install pycocotools -c conda-forge
 ```
 
 ### Prepare Data:
-#### HICO-DET
-
 #### V-COCO
 ##### Annotations
 Download all annotations from [here](https://pan.baidu.com/s/1Z4aHLV9GMdZ3XdEFFqf4yg) psw:b4il and put them into `data/vcoco/annotations/`
@@ -70,6 +62,7 @@ python -m lib.data_process.nis_hoi_candidates
 ```
 #### Download 
 Download training,val,test data from [here](https://pan.baidu.com/s/16VO33ac1IFKkO0dSLEFYEQ) psw:245d and put them into `data/vcoco/`
+
 Download v-coco eval data from [here](/home/xian/Documents/code/PD-Net/data/vcoco) psw:cws6 and put them into `eval/data/`
 
 ### Train, Test and Eval Model
