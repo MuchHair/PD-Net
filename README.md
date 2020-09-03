@@ -5,5 +5,5 @@
 Polysemy Deciphering Network for Robust Human-Object Interaction Detection （[[Extended version paper](https://arxiv.org/pdf/2008.02918.pdf)] [[Code]](https://github.com/MuchHair/PD-Net-Extended-Version))
 
 ## Getting Startted
-For now We provide the model and evaluation on V-COCO database in b1 branch. The remaining parts will be available soon.
+For now we provide the model and evaluation on V-COCO database in b1 branch. The remaining parts will be available soon.
  
