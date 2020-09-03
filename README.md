@@ -63,7 +63,7 @@ python -m lib.data_process.nis_hoi_candidates
 #### Download 
 Download training,val,test data from [here](https://pan.baidu.com/s/16VO33ac1IFKkO0dSLEFYEQ) psw:245d and put them into `data/vcoco/`
 
-Download v-coco eval data from [here](/home/xian/Documents/code/PD-Net/data/vcoco) psw:cws6 and put them into `eval/data/`
+Download v-coco eval data from [here](https://pan.baidu.com/s/1lQd8T4oivFRXJloZpdcxjw) psw:rrd8 and put them into `eval/data/`
 
 ### Train, Test and Eval Model
 ##### Baseline
