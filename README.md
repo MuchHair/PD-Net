@@ -6,4 +6,15 @@ Polysemy Deciphering Network for Robust Human-Object Interaction Detection （[[
 
 ## Getting Startted
 For now we provide the model and evaluation on V-COCO database in b1 branch. The remaining parts will be available soon.
- 
+
+## Citation
+Please consider citing this paper if it inspires you. 
+```
+@inproceedings{zhong2020polysemy,
+  title={Polysemy deciphering network for human-object interaction detection},
+  author={Zhong, Xubin and Ding, Changxing and Qu, Xian and Tao, Dacheng},
+  booktitle={Proc. Eur. Conf. Comput. Vis},
+  year={2020}
+}
+
+```
