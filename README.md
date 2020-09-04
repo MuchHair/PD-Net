@@ -60,6 +60,9 @@ python -m lib.data_process.label_hoi_candidates
 ```
 python -m lib.data_process.nis_hoi_candidates
 ```
+#### HICO-DET 
+Data preparing for HICO-DET will be eaiser with the guidance of [No_frills](https://github.com/BigRedT/no_frills_hoi_det).
+
 #### Download 
 Download training,val,test data from [here](https://pan.baidu.com/s/16VO33ac1IFKkO0dSLEFYEQ) psw:245d and put them into `data/vcoco/`
 
