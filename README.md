@@ -16,5 +16,8 @@ Please consider citing this paper if it inspires you.
   booktitle={Proc. Eur. Conf. Comput. Vis},
   year={2020}
 }
-
 ```
+### Acknowledgement
+This code is mainly built upon [No-Frills](https://github.com/BigRedT/no_frills_hoi_det).
+
+
