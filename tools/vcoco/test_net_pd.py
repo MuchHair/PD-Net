@@ -21,13 +21,15 @@ def generate_pkl(pred_dets_hdf5, out_dir, file_name):
     print(file_name)
 
     pred_dets = h5py.File(pred_dets_hdf5, 'r')
+    print(len(pred_dets.keys()))
     assert len(pred_dets.keys()) == 4539
 
-    hoi_list = io.load_json_object("data/vcoco/annotations/hoi_list_234.json")
+    hoi_list = io.load_json_object("data_symlinks/vcoco_processed/new/hoi_list_234.json")
     hoi_dict = {int(hoi["id"]) - 1: hoi for hoi in hoi_list}
 
-    result_list = []
+    result_list_all = []
     for global_id in tqdm(pred_dets.keys()):
+        result_list = []
         image_id = int(global_id.split("_")[1])
 
         start_end_ids = pred_dets[global_id]['start_end_ids']
@@ -52,8 +54,8 @@ def generate_pkl(pred_dets_hdf5, out_dir, file_name):
                         if origin_dets[0] == dets[0] and origin_dets[1] == dets[1] \
                                 and origin_dets[2] == dets[2] and origin_dets[3] == dets[3]:
                             find = True
-                            origin_score = origin_dets[8] * origin_dets[9]
-                            cur_score = dets[8] * dets[9]
+                            origin_score = origin_dets[8]
+                            cur_score = dets[8]
                             if cur_score > origin_score:
                                 hoi_dets_parts[i] = dets
                             break
@@ -62,21 +64,33 @@ def generate_pkl(pred_dets_hdf5, out_dir, file_name):
 
             for hoi_dets in hoi_dets_parts:
                 person_boxes = hoi_dets[:4].tolist()
-
-                per_image_dict = {}
-                per_image_dict["image_id"] = image_id
-                per_image_dict["person_box"] = person_boxes
-
                 aciton = hoi_dict[hoi_id]["verb"]
                 role = hoi_dict[hoi_id]["role"]
+                find = False
+                for result in result_list:
+                    if result["image_id"] == image_id and result["person_box"] == person_boxes:
+                        if aciton + "_" + role not in result:
+                            result[aciton + "_" + role] = [hoi_dets[4], hoi_dets[5],
+                                                           hoi_dets[6], hoi_dets[7],
+                                                           hoi_dets[8]]
+                        else:
+                            if hoi_dets[8] > result[aciton + "_" + role][4]:
+                                result[aciton + "_" + role] = [hoi_dets[4], hoi_dets[5],
+                                                               hoi_dets[6], hoi_dets[7],
+                                                               hoi_dets[8]]
+                        find = True
+                        break
+                if not find:
+                    per_image_dict = {}
+                    per_image_dict["image_id"] = image_id
+                    per_image_dict["person_box"] = person_boxes
+                    per_image_dict[aciton + "_" + role] = [hoi_dets[4], hoi_dets[5],
+                                                           hoi_dets[6], hoi_dets[7],
+                                                           hoi_dets[8]]
 
-                per_image_dict[aciton + "_" + role] = [hoi_dets[4], hoi_dets[5],
-                                                       hoi_dets[6], hoi_dets[7],
-                                                       hoi_dets[8] * hoi_dets[9]]
-
-                result_list.append(per_image_dict)
-
-    io.dump_pickle_object(result_list, os.path.join(out_dir, file_name + ".pkl"))
+                    result_list.append(per_image_dict)
+        result_list_all.extend(result_list)
+    io.dump_pickle_object(result_list_all, os.path.join(out_dir, file_name + ".pkl"))
 
 
 def eval_model(model, dataset, output_dir, model_num, using_clusterid=False):
