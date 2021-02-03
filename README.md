@@ -5,7 +5,7 @@
 ### Polysemy Deciphering Network for Robust Human-Object Interaction Detection （[[Extended version paper](https://arxiv.org/pdf/2008.02918.pdf)] [[Code]](https://github.com/MuchHair/PD-Net-Extended-Version))
 
 ## Guidelines
-# ECCV 2020 version
+#### ECCV 2020 version
 The code of ECCV 2020 version for PD-Net is provided in [[b1 branch]](https://github.com/MuchHair/PD-Net/tree/b1). 
 
 
