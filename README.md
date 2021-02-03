@@ -1,16 +1,17 @@
 # PD-Net
 ### Polysemy Deciphering Network for Human-Object Interaction Detection （[[ECCV2020 paper]](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650069.pdf)）
-<img src="https://github.com/MuchHair/Test/blob/master/Paper_Images/overview.png" width="999" >
 
 ### Polysemy Deciphering Network for Robust Human-Object Interaction Detection （[[Extended version paper](https://arxiv.org/pdf/2008.02918.pdf)] [[Code]](https://github.com/MuchHair/PD-Net-Extended-Version))
 
 ## Guidelines
-#### ECCV 2020 version
-The code of ECCV 2020 version for PD-Net is provided in [[b1 branch]](https://github.com/MuchHair/PD-Net/tree/b1). 
+#### ECCV2020 version
+The code of ECCV2020 version for PD-Net is provided in [b1 branch](https://github.com/MuchHair/PD-Net/tree/b1). 
 
+#### Extended version
+The code of extended version for PD-Net and a new dataset HOI-VP are provided [here] (https://github.com/MuchHair/PD-Net-Extended-Version). 
 
 ## Citation
-Please consider citing this paper if it inspires you. 
+Please consider citing the following papers if this repo inspires you. 
 ```
 @inproceedings{zhong2020polysemy,
   title={Polysemy deciphering network for human-object interaction detection},
