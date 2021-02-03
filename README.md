@@ -1,4 +1,4 @@
-# PD-Net 
+# Official Source code of PD-Net 
 ## Paper list
 #### Polysemy Deciphering Network for Human-Object Interaction Detection （[[ECCV2020 paper]](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650069.pdf)）
 
