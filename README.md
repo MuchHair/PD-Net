@@ -9,7 +9,7 @@
 The code of ECCV2020 version for PD-Net is provided in [b1 branch](https://github.com/MuchHair/PD-Net/tree/b1). 
 
 #### IJCV version
-The code of extended version for PD-Net and a new dataset HOI-VP are provided [here](https://github.com/MuchHair/PD-Net-Extended-Version). 
+The code of IJCV version for PD-Net and a new dataset HOI-VP are provided [here](https://github.com/MuchHair/PD-Net-Extended-Version). 
 
 ## Citation
 Please consider citing the following papers if this repo inspires you. 
