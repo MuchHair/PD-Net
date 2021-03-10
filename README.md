@@ -30,8 +30,8 @@ use [faster-rcnn](https://github.com/SherlockHolmes221/pytorch-faster-rcnn) to g
 
 ```
 # select and generate candidates
-python -m lib.data_process.select
-python -m lib.data_process.hoi_candidates
+python -m lib.data_process_vcoco.select
+python -m lib.data_process_vcoco.hoi_candidates
 ```
 2)get human,object,union features
 
@@ -40,25 +40,25 @@ use [faster-rcnn](https://github.com/SherlockHolmes221/pytorch-faster-rcnn) to g
 3)run AlphaPose 
 ```
 # prepare input file for AlphaPose
-python -m lib.data_process.prepare_for_pose
+python -m lib.data_process_vcoco.prepare_for_pose
 ```
 use  [AlphaPose](https://github.com/SherlockHolmes221/AlphaPose) to get keypoints
 ```
 # convert and generate features
-python -m lib.data_process.convert_pose_result
-python -m lib.data_process.cache_alphapose_features
+python -m lib.data_process_vcoco.convert_pose_result
+python -m lib.data_process_vcoco.cache_alphapose_features
 ```
 4)bbox
 ```
-python -m lib.data_process.cache_box_features
+python -m lib.data_process_vcoco.cache_box_features
 ```
 5)labels
 ```
-python -m lib.data_process.label_hoi_candidates
+python -m lib.data_process_vcoco.label_hoi_candidates
 ```
 6)nis
 ```
-python -m lib.data_process.nis_hoi_candidates
+python -m lib.data_process_vcoco.nis_hoi_candidates
 ```
 #### HICO-DET 
 Data preparing for HICO-DET will be eaiser with the guidance of [No_frills](https://github.com/BigRedT/no_frills_hoi_det).
