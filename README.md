@@ -45,7 +45,7 @@ python -m lib.data_process.prepare_for_pose
 use  [AlphaPose](https://github.com/SherlockHolmes221/AlphaPose) to get keypoints
 ```
 # convert and generate features
-python -m lib.data_process_hico.cpn_convert
+python -m lib.data_process.convert_pose_result
 python -m lib.data_process.cache_alphapose_features
 ```
 4)bbox
