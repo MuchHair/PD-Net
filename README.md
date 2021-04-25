@@ -21,7 +21,7 @@ Please consider citing the following papers if this repo inspires you.
   year={2020}
 }
 
-@article{zhong2020polysemy,
+@article{zhong2021polysemy,
   title={Polysemy Deciphering Network for Robust Human-Object Interaction Detection},
   author={Zhong, Xubin and Ding, Changxing and Qu, Xian and Tao, Dacheng},
   journal={IJCV},
